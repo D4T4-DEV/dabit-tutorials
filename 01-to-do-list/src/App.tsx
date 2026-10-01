@@ -18,8 +18,7 @@ function App() {
 
   return (
     <div>
-      <p>Aqui ira cosas lindas :DDDDD</p>
-      <p>Aqui ira cosas lindas :DDDDD</p>
+      <FormToDo onCreate={handleCreate}/>
     </div>
   );
 }
