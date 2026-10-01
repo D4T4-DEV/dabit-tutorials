@@ -11,7 +11,14 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { PlusCircle, Sparkles, AlertCircle, CheckCircle2 } from "lucide-react";
-import type { ToDo } from "./ToDoItem";
+
+export interface ToDo {
+  id: string;
+  title: string;
+  description: string;
+  completed: boolean;
+  createdAt?: Date;
+}
 
 interface FormToDoProps {
   onCreate: (data: ToDo) => void;
@@ -36,6 +43,7 @@ export function FormToDo({ onCreate }: FormToDoProps) {
       title: title.trim(),
       description: description.trim(),
       completed: false,
+      createdAt: new Date(),
     };
 
     onCreate(newTodo);
